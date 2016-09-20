@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/dodgerblue"
+    android:padding="5dp"
+    tools:context=".activity.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:text="报告管理"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:onClick="exit"
+            android:paddingRight="5dp"
+            android:text="退出" />
+    </RelativeLayout>
+
+    <!--<RadioGroup-->
+    <!--android:id="@+id/rg1"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/ll_header"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/rb_local"-->
+    <!--style="@style/MyRadioButtonTheme"-->
+    <!--android:checked="true"-->
+    <!--android:text="@string/rb_local" />-->
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/rb_sd_card"-->
+    <!--style="@style/MyRadioButtonTheme"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginStart="10dp"-->
+    <!--android:text="@string/rb_sd_card" />-->
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/rb_usb_flash_disk"-->
+    <!--style="@style/MyRadioButtonTheme"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginStart="10dp"-->
+    <!--android:text="@string/rb_usb_flash_disk" />-->
+    <!--</RadioGroup>-->
+
+    <!--<RadioGroup-->
+    <!--android:id="@+id/rg2"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_below="@+id/ll_header"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/rb_information_same_day"-->
+    <!--style="@style/MyRadioButtonTheme"-->
+    <!--android:layout_marginEnd="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:checked="true"-->
+    <!--android:text="@string/rb_information_same_day" />-->
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/rb_information_hebdomad"-->
+    <!--style="@style/MyRadioButtonTheme"-->
+    <!--android:layout_marginEnd="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:text="@string/rb_information_hebdomad" />-->
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/rb_information_all"-->
+    <!--style="@style/MyRadioButtonTheme"-->
+    <!--android:text="@string/rb_information_all" />-->
+
+    <!--</RadioGroup>-->
+
+    <LinearLayout
+        android:id="@+id/ll_information_header"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/ll_header"
+        android:layout_marginTop="5dp"
+        android:background="@color/lightcyan"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/MyTextViewTheme"
+            android:layout_weight="2"
+            android:text="@string/tv_number" />
+
+        <TextView
+            style="@style/MyTextViewTheme"
+            android:layout_weight="1"
+            android:text="@string/tv_name" />
+
+        <TextView
+            style="@style/MyTextViewTheme"
+            android:layout_weight="1"
+            android:text="@string/tv_sex" />
+
+        <TextView
+            style="@style/MyTextViewTheme"
+            android:layout_weight="2"
+            android:text="@string/tv_time" />
+
+        <TextView
+            style="@style/MyTextViewTheme"
+            android:layout_weight="3"
+            android:text="@string/tv_result" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_information"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_operation"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ll_information_header"
+        android:layout_gravity="left"
+        android:background="@color/white"
+        android:listSelector="@drawable/listview_item_bg_selector" />
+
+    <LinearLayout
+        android:id="@+id/ll_operation"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_edit"
+            style="@style/MyButtonTheme"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:text="@string/btn_insert" />
+
+        <Button
+            android:id="@+id/btn_preview"
+            style="@style/MyButtonTheme"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:text="@string/btn_edit" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            style="@style/MyButtonTheme"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:text="@string/btn_delete" />
+
+        <Button
+            android:id="@+id/btn_transmission"
+            style="@style/MyButtonTheme"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:text="@string/btn_transmission" />
+
+        <Button
+            android:id="@+id/btn_query"
+            style="@style/MyButtonTheme"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/btn_query" />
+
+    </LinearLayout>
+</RelativeLayout>

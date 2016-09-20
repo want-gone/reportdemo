@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dodgerblue"
+    android:padding="5dp"
+    tools:context="com.example.reportdemo2.activity.EditPatientInfoActivity">
+
+    <RelativeLayout
+
+        android:id="@+id/ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="返回"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:text="报告编辑"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:text="保存"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/ll_header"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_patient_info"
+            style="@style/MyTitleTextViewTheme"
+            android:text="患者信息" />
+
+        <TextView
+            android:id="@+id/tv_patient_report"
+            style="@style/MyTitleTextViewTheme"
+            android:text="心电图报告" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_patient"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_ming_ni_su_da_ma"
+        android:layout_below="@+id/ll_title"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg_selector"
+            android:padding="5dp">
+
+
+            <RelativeLayout
+                android:id="@+id/rl1"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tv_patient_number"
+                    style="@style/MySecondTextViewTheme"
+                    android:text="编号" />
+
+                <TextView
+                    android:id="@+id/tv_number"
+                    style="@style/MyEditTextViewTheme"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@+id/tv_patient_number" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/r2"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/rl1"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tv_patient_name"
+                    style="@style/MySecondTextViewTheme"
+                    android:text="姓名" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    style="@style/MyEditTextViewTheme"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@+id/tv_patient_name" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl3"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/r2"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tv_patient_sex"
+                    style="@style/MySecondTextViewTheme"
+                    android:text="性别" />
+
+                <EditText
+                    android:id="@+id/et_sex"
+                    style="@style/MyEditTextViewTheme"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@+id/tv_patient_sex" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl4"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/rl3"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tv_patient_age"
+                    style="@style/MySecondTextViewTheme"
+                    android:text="年龄" />
+
+                <EditText
+                    android:id="@+id/et_age"
+                    style="@style/MyEditTextViewTheme"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@+id/tv_patient_age" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl5"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/rl4"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tv_patient_height"
+                    style="@style/MySecondTextViewTheme"
+                    android:text="身高" />
+
+                <EditText
+                    android:id="@+id/et_height"
+                    style="@style/MyEditTextViewTheme"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toLeftOf="@+id/tv_cm"
+                    android:layout_toRightOf="@+id/tv_patient_height" />
+
+                <TextView
+                    android:id="@+id/tv_cm"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="cm"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl6"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/rl5"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tv_patient_weight"
+                    style="@style/MySecondTextViewTheme"
+                    android:text="体重" />
+
+                <EditText
+                    android:id="@+id/et_weight"
+                    style="@style/MyEditTextViewTheme"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toLeftOf="@+id/tv_kg"
+                    android:layout_toRightOf="@+id/tv_patient_weight" />
+
+                <TextView
+                    android:id="@+id/tv_kg"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="kg"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_report"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg_selector"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/btn_edit_patient_dictionary"
+                style="@style/MySecondButtonTheme"
+                android:text="编辑病例字典" />
+
+            <Button
+                android:id="@+id/btn_patient_assistant"
+                style="@style/MySecondButtonTheme"
+                android:layout_below="@+id/btn_edit_patient_dictionary"
+                android:layout_marginTop="5dp"
+                android:text="病例助手" />
+
+            <Button
+                android:id="@+id/btn_patient_query"
+                style="@style/MySecondButtonTheme"
+                android:layout_below="@+id/btn_patient_assistant"
+                android:layout_marginTop="5dp"
+                android:text="病例查询" />
+
+            <TextView
+                android:id="@+id/tv_patient_query"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_patient_query"
+                android:layout_marginTop="5dp"
+                android:text="诊断结果"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/et_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tv_patient_query"
+                android:background="@color/white"
+                android:gravity="top" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_ming_ni_su_da_ma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_ming_ni_su_da_ma_show"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:text="明尼苏达码"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_ming_ni_su_da_ma_show"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_above="@+id/tv_xin_dian_tu_ti_zh"
+        android:background="@drawable/tv_bg_shape" />
+
+    <TextView
+        android:id="@+id/tv_xin_dian_tu_ti_zh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_bottom"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:text="心电图体征"
+        android:textColor="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/tv_bg_shape">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingTop="2dp">
+
+                <TextView
+                    style="@style/MySignTextViewTheme"
+                    android:layout_weight="1"
+                    android:text="心室率：" />
+
+                <TextView
+                    style="@style/MySignTextViewTheme"
+                    android:layout_weight="1"
+                    android:text="PR：" />
+
+                <TextView
+                    style="@style/MySignTextViewTheme"
+                    android:layout_weight="1"
+                    android:text="QRS：" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@+id/ll_1"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingTop="2dp">
+
+                <TextView
+                    style="@style/MySignTextViewTheme"
+                    android:layout_weight="2" />
+
+                <TextView
+                    style="@style/MySignTextViewTheme"
+                    android:layout_weight="1"
+                    android:text="RV5/SV1：" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@+id/ll_2"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="2dp">
+
+                <TextView
+                    style="@style/MySignTextViewTheme"
+                    android:layout_weight="1"
+                    android:text="QT/QTC：" />
+
+                <TextView
+                    style="@style/MySignTextViewTheme"
+                    android:layout_weight="1"
+                    android:text="P/QRS/T：" />
+
+                <TextView
+                    style="@style/MySignTextViewTheme"
+                    android:layout_weight="1"
+                    android:text="RV5+SV1：" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

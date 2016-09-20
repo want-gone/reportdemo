@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_patient_number"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/tv_number" />
+
+    <TextView
+        android:id="@+id/tv_patient_name"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/tv_name" />
+
+    <TextView
+        android:id="@+id/tv_patient_sex"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/tv_sex" />
+
+    <TextView
+        android:id="@+id/tv_patient_time"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/tv_time" />
+
+    <TextView
+        android:id="@+id/tv_patient_result"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/tv_result" />
+
+    <CheckBox
+        android:id="@+id/checkbox_operate_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:visibility="gone" />
+</LinearLayout>

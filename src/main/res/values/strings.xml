@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">报告管理2</string>
+    <string name="rb_local">本地</string>
+    <string name="rb_sd_card">SD</string>
+    <string name="rb_usb_flash_disk">U盘</string>
+    <string name="rb_information_same_day">当天</string>
+    <string name="rb_information_hebdomad">一周</string>
+    <string name="rb_information_all">所有</string>
+    <string name="btn_insert">插入</string>
+    <string name="btn_edit">编辑</string>
+    <string name="btn_delete">删除</string>
+    <string name="btn_transmission">传输</string>
+    <string name="btn_query">查询</string>
+    <string name="tv_number">编号</string>
+    <string name="tv_name">姓名</string>
+    <string name="tv_sex">性别</string>
+    <string name="tv_time">时间</string>
+    <string name="tv_result">诊断结果</string>
+
+</resources>
